@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&family=Sekuya&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+body{
+  margin: 0;
+  overflow: hidden;
+}
+.hero {
+  width:100%;
+  min-height:100vh;
+  position: relative;
+}
+
+/* Slider image full cover */
+.hero img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Dark overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 1;
+}
+
+/* Hero content */
+.hero-content {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+}
+.carousel-control-prev,.carousel-control-next{
+  width:6%;
+  z-index: 3;
+}
+.carousel-control-prev-icon,.carousel-control-next-icon{
+  filter:invert(1);
+}
+
+@media screen and (max-width:350px){
+  .container .navbar-brand{
+    font-size: 18px;
+    padding-top:10px;
+  }
+  .navbar-toggler-icon{
+    font-size: 15px;
+  }
+  .hero-content{
+    margin-left: 10px;
+  }
+  .hero-content span{
+    font-size: 12px;
+  }
+  .hero-content h1{
+    font-size: 28px;
+  }
+  .hero-content p{
+    font-size: 15px;
+  }
+  .hero-content div a{
+    font-size: 15px;
+  }
+}
